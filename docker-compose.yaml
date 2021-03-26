@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   frontend:
-    image: docker.io/adinaclaudiatoma/docker-ws-frontend:1.0
+    image: docker-ws-frontend:1.0
     build:
       context: todo-frontend
       # backend port needs to be passed as build arg because it's used in the build/compile stage, not at runtime
@@ -17,7 +17,7 @@ services:
       - backend
 
   backend:
-    image: docker.io/adinaclaudiatoma/docker-ws-backend:1.0
+    image: docker-ws-backend:1.0
     build:
       context: todo-backend
     environment:
